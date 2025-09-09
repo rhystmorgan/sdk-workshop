@@ -39,9 +39,9 @@ export async function createWallet() {
     ...derivedAddresses
   ]
 
-  const colourScheme = makeColourScheme(xprivHex.slice(2,66))
+  const colourScheme = makeColourScheme(xprivHex.slice(2, 66))
 
-  const mapped = makeMappedBlock(xprivHex.slice(2,66), colourScheme)
+  const mapped = makeMappedBlock(xprivHex.slice(2, 66), colourScheme)
 
   const lines = listToLines(mapped, walletData, colourScheme)
 

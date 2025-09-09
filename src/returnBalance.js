@@ -7,7 +7,8 @@ export async function returnBalance() {
 
   const balance = await thor.accounts.getAccount(account)
 
-  console.log(`VET Balance ${BigInt(balance.balance) / 1000000000000000000n}`)
+  console.log(balance)
+  console.log(`VET Balance ${BigInt(balance.balance)}`)
   console.log(`VTHO Balance ${BigInt(balance.energy) / 1000000000000000000n}`)
 }
 

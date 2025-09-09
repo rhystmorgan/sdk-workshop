@@ -26,15 +26,17 @@ export async function loadContract() {
 
   const institute = await thor.contracts.executeCall(
     '0x82311b8ecf38c74ac13a0d14894066695f4fd6a9',
-    learnAbi.getFunction('institute'),
+    learnAbi.getFunction('getAvailableFunds'),
     []
   )
 
-  console.log(`
-    SUCCESS: ${institute.success}`)
-  return console.log(`
-    INSTITUTE: ${institute.result.plain}
-    `)
+  console.log(institute)
+
+  // console.log(`
+  //   SUCCESS: ${institute.success}`)
+  // return console.log(`
+  //   INSTITUTE: ${institute.result.plain}
+  //   `)
 }
 
 loadContract()
